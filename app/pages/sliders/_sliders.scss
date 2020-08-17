@@ -1,0 +1,39 @@
+
+
+.title {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__text {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    &__btn-left {
+        margin-left: auto;
+        margin-right: 54px;
+    }
+
+    &__btn-left,
+    &__btn-right {
+        background-color: #CA4D4C;
+        width: 70px;
+        height: 66px;
+        border: none;
+        padding: 11px 0;
+    }
+}
+
+.slider-1 {
+    &__item {
+        padding: 38px 0;
+    }
+
+    &__item>* {
+        margin: 0 auto;
+    }
+}

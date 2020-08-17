@@ -1,0 +1,8 @@
+$accent : #CA4D4C;
+$accent-btn: #EA9090;
+$footer-bg:#D78275; 
+
+@mixin f400($size, $lh) {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}

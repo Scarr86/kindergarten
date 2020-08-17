@@ -1,0 +1,242 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+@import "../pages/cards/cards";
+@import "../pages/sliders/sliders";
+
+
+// HEADER start
+.header {
+
+    &__inner {
+        height: 101px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    &__logo {
+        line-height: 0;
+    }
+
+    &__title {
+        max-width: 340px;
+        margin-left: 80px;
+		letter-spacing: 0.08rem;
+		font-weight: 400;
+    }
+
+    &__menu {
+        width: 100%;
+        margin-left: 100px;
+    }
+
+    &__menu-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        letter-spacing: 0.1em;
+
+        li+li {
+            margin-left: 69px;
+        }
+    }
+
+    &__menu-dropdown {
+        select {
+            // direction: rtl;
+            cursor: pointer;
+            padding: 8px;
+            border: none;
+            outline: none;
+            letter-spacing: inherit;
+
+            option {
+                letter-spacing: inherit;
+            }
+        }
+
+        // padding-right: 58px;
+        // position: relative;
+        // cursor: pointer;
+
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     border: 15px solid #000;
+        //     height: 0;
+        //     border-bottom-color: transparent;
+        //     border-left-color: transparent;
+        //     border-right-color: transparent;
+        //     top: 7px;
+        //     right: 0;
+        // }
+    }
+
+    &__btn {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-end;
+        border: none;
+        font-weight: 300;
+        padding: 8px;
+        width: 80px;
+        height: 75px;
+        background-color: #ECE9E9;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 0.09em;
+        // margin-left: 65px;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 100%;
+            height: 4px;
+            background: #000;
+            order: -1;
+            margin-bottom: 13px;
+        }
+    }
+}
+
+
+
+// HEADER eng
+
+.face__inner {
+    min-height: 764px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+// FOOTER  start
+.footer {
+    background-color: $footer-bg;
+
+    &__inner {
+        height: 86px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+//FOOTER END
+
+
+//============ CHILD PAGE ================
+.child-face {
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        align-content: center;
+        padding: 80px 0 30px;
+
+        background-image: url(../images/content/child-face-bg.png);
+        background-repeat: no-repeat;
+        background-size: initial;
+        background-position: right top;
+
+    }
+
+    &__info {
+        max-width: 571px;
+        margin: 25px 115px 0 80px;
+
+
+
+
+    }
+
+    &__name {
+        padding-left: 50px;
+        max-width: 420px;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 139.19%;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        border-left: 12px solid $accent-btn;
+    }
+
+    &__text {
+        font-size: 21px;
+        line-height: 150%;
+
+        p {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__foto {
+        flex-shrink: 0;
+
+        width: 634px;
+        height: 653px;
+        // height: 100%;
+        // box-shadow: -24px -8px 0 15px #EBEBEB;
+        position: relative;
+        filter: drop-shadow(0px 4px 39px rgba(0, 0, 0, 0.25));
+
+        &::before,
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform: scale(1.05);
+        }
+
+        &::before {
+            background-color: #EBEBEB;
+            border-radius: 50%;
+            left: -24px;
+            top: -8px;
+            z-index: 0;
+        }
+
+        &::after {
+            background-image: url(../images/content/circle.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            // border: 1px dashed #D78275;
+            // border-radius: 50%;
+            top: -11px;
+            left: -38px;
+            z-index: 1;
+        }
+
+        img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            z-index: 5;
+        }
+    }
+}
+
+
+
+//====================
+
+
+
+
+@import "media";
