@@ -9,8 +9,8 @@
   "author": "Vadim Prokopchuk",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.5",
-    "del": "^5.0.0",
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-concat": "^2.6.1",
