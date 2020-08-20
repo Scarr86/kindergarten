@@ -8,7 +8,7 @@
 // HEADER start
 
 .header {
- 
+  background-color: #faf8f8;
   &__inner {
     height: 101px;
     display: flex;
@@ -48,6 +48,7 @@
 
   &__menu-dropdown {
     select {
+      background-color: #faf8f8;
       // direction: rtl;
       cursor: pointer;
       padding: 8px;
@@ -110,7 +111,6 @@
 
 // HEADER eng
 
-
 .face__inner {
   min-height: 764px;
   background-repeat: no-repeat;
@@ -134,12 +134,11 @@
 
 //============ CHILD PAGE ================
 .child-face {
+  margin-bottom: 93px;
   &__inner {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap-reverse;
-    align-content: center;
-    padding: 80px 0 30px;
+    //flex-wrap: wrap-reverse;
+    padding: 80px 0 0;
 
     background-image: url(../images/content/child-face-bg.png);
     background-repeat: no-repeat;
@@ -149,7 +148,7 @@
 
   &__info {
     max-width: 571px;
-    margin: 25px 115px 0 80px;
+    margin: 25px 115px 0 75px;
   }
 
   &__name {
@@ -173,12 +172,6 @@
   }
 
   &__foto {
-    flex-shrink: 0;
-
-    width: 634px;
-    height: 653px;
-    // height: 100%;
-    // box-shadow: -24px -8px 0 15px #EBEBEB;
     position: relative;
     filter: drop-shadow(0px 4px 39px rgba(0, 0, 0, 0.25));
 
@@ -204,22 +197,88 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      // border: 1px dashed #D78275;
-      // border-radius: 50%;
       top: -11px;
       left: -38px;
       z-index: 1;
     }
 
     img {
+      width: 634px;
+      height: 653px;
       position: relative;
-      width: 100%;
-      height: 100%;
+
       object-fit: cover;
       object-position: center;
       border-radius: 50%;
       z-index: 5;
     }
+  }
+}
+
+.jumps {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -58px;
+  }
+
+  &__item {
+    flex-basis: calc(33.3333% - 58px);
+    margin-left: 58px;
+    margin-bottom: 70px;
+  }
+}
+
+.fly-line {
+  &__svg {
+    path {
+      stroke-dasharray: 2 2;
+      stroke-dashoffset: 1000;
+    }
+  }
+}
+
+.sportclub {
+  margin-bottom: 115px;
+  &__wrapper {
+  }
+
+  &__inner {
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0.06em;
+    margin-bottom: 35px;
+  }
+
+  &__subtitle {
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 0.08em;
+    padding-bottom: 29px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 181px;
+      height: 5px;
+      background-color: #adadad;
+    }
+  }
+  &__text {
+    font-size: 21px;
+    line-height: 150%;
+    margin-bottom: 50px;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
   }
 }
 

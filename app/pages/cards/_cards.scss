@@ -111,10 +111,10 @@
   border-radius: 25px;
   width: 500px;
   height: 338px;
-  &.card-3--v{
-      width: 456px;
-      height: 538px;
-      border-radius: 15px;
+  &.card-3--v {
+    width: 456px;
+    height: 538px;
+    border-radius: 15px;
   }
 
   &:hover {
@@ -245,6 +245,9 @@
   border-left-color: transparent;
   border-right-color: transparent;
   border-bottom-color: transparent;
+  // border-top-width: $w;
+  // border-top-style: solid;
+  // border-top-color: $color;
   border-left-width: $lw;
   border-right-width: $rw;
   border-bottom-width: 0;
@@ -252,8 +255,8 @@
 
 .card-7 {
   @extend %card;
-  width: 387px;
-  height: 336px;
+  max-width: 387px;
+  max-height: 336px;
   border: 1px solid #c4c4c4;
   border-radius: 25px;
   padding: 27px;
@@ -262,27 +265,30 @@
   justify-content: center;
   align-items: center;
 
-  &__top {
-    text-align: left;
+  &__top,
+  &__bottom {
     width: 100%;
+    &::before {
+      margin-right: 7px;
+    }
+  }
 
+  &__top {
     &::before {
       vertical-align: top;
-      margin-right: 7px;
       @include arrowup(13px, 8px, 8px, #adadad);
     }
 
     &::after {
+      vertical-align: top;
       @include arrowdown(27px, 16px, 16px, #ca4d4c);
     }
   }
 
   &__bottom {
     text-align: right;
-    width: 100%;
 
     &::before {
-      margin-right: 7px;
       @include arrowup(27px, 16px, 16px, #ca4d4c);
     }
 
@@ -298,7 +304,7 @@
   &:hover {
     background-color: #dfdfdf;
     box-shadow: 3px 0px 36px rgba(182, 179, 179, 0.31);
-    transform: scale(1.01);
+    transform: scale(1.05);
 
     .mask-1 {
       fill: #ca4d4c;
@@ -307,10 +313,14 @@
     .mask-2 {
       fill: #ea9090;
     }
+    .mask-3{
+      fill: #fff;
+    }
   }
 
   &__img {
     margin-bottom: 29px;
+    height: 150px;
   }
 
   &__body {
