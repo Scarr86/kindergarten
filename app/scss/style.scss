@@ -107,6 +107,50 @@
       margin-bottom: 13px;
     }
   }
+  .sidenav {
+    display: flex;
+    padding: 36px 87px 36px 53px;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 680px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    z-index: 10;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all .5s;
+    &.active {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    &__btn {
+      height: 30px;
+      width: 30px;
+      position: relative;
+      background: none;
+      border: none;
+      &::before,
+      &::after {
+        content: "";
+        top: 50%;
+        left: 0;
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background: #000;
+      }
+      &::before {
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
 
 // HEADER eng
@@ -220,6 +264,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: -58px;
+    // justify-content: center;
   }
 
   &__item {
